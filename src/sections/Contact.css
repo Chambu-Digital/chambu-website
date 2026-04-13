@@ -1,0 +1,132 @@
+/* CTA Band */
+.contact__cta-band {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 3rem 2.5rem;
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--clr-accent-mid);
+}
+
+.contact__cta-band-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 100% at 10% 50%, rgba(0,168,90,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 90% 20%, rgba(0,168,90,0.05) 0%, transparent 60%),
+    var(--clr-surface);
+  pointer-events: none;
+}
+
+.contact__cta-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact__cta-copy {
+  flex: 1;
+  min-width: 260px;
+}
+
+.contact__cta-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--clr-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+}
+
+.contact__cta-sub {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.contact__cta-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.contact__cta-btn {
+  white-space: nowrap;
+}
+
+/* Contact cards */
+.contact__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--clr-border-strong);
+  transform: translateY(-3px);
+}
+
+.contact-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card__icon--whatsapp {
+  background: rgba(37,211,102,0.12);
+  color: #25d366;
+}
+
+.contact-card__icon--email {
+  background: var(--clr-accent-dim);
+  color: var(--clr-accent);
+}
+
+.contact-card__icon--location {
+  background: var(--clr-gold-dim);
+  color: var(--clr-gold);
+}
+
+.contact-card__label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-faint);
+  margin-bottom: 6px;
+}
+
+.contact-card__value {
+  font-size: 0.9rem;
+  color: var(--clr-text);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .contact__cta-band {
+    padding: 2.5rem 1.75rem;
+  }
+  .contact__cards {
+    grid-template-columns: 1fr;
+  }
+}
